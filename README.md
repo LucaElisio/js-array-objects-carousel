@@ -6,12 +6,14 @@
         - [x] Inserisco in pagina gli elementi dentro gli oggetti dell'array tramite innerHTML
 
 2. Al click dell'utente sulle frecce verso sinistra o destra, l'immagine attiva con i relativi titolo e testo diventerà visibile.
-    - [ ] Prelevo dalla pagina gli elementi prev e next
-    - [ ] Dichiaro variabile per le immagini attive (*imgActive*) e la imposto a 0
-    - [ ] Prelevo dalla pagina tutti gli elementi immagini tramite querySelectorAll e li salvo in una variabile (*imgListElem*)
-    - [ ] Al click di next o prev si attiva una funzione
-    - [ ] La funzione next andrà a scorrere la nodelist delle immagini, con dentro la condizione che se l'index è <= della lunghezza della nodelist - 1 allora *imgActive* riparte da 0, altrimenti si incrementa
-
+    - [x] Prelevo dalla pagina gli elementi prev e next
+    - [x] Dichiaro variabile per le immagini attive (*imgActive*) e la imposto a 0
+    - [x] Prelevo dalla pagina tutti gli elementi immagini tramite querySelectorAll e li salvo in una variabile (*imgListElem*)
+    - [x] Al click di next o prev si attiva una funzione
+        - [x] Rimuovo classe active dall'immagine
+        - [x] Condizione per incremento di *imgActive*
+        - [x] Aggiungo classe all'immagine
+ 
 
 
 

@@ -34,11 +34,10 @@ console.log(carouselImagesElem);
 // Inserisco dinamicamente le immagini all'interno dell'elemento
 images.forEach((curImg) => {
   carouselImagesElem.innerHTML += `
-  <div class="my-carousel-item active">
+  <div class="my-carousel-item">
     <img
       class="img-fluid"
       src="${curImg.image}"
-      alt="Marvel's Spiderman Miles Morale picture"
     />
     <div class="item-description px-3">
       <h2>${curImg.title}</h2>
@@ -47,3 +46,32 @@ images.forEach((curImg) => {
   </div>
   `;
 });
+
+// Prelevo dalla pagina gli elementi prev e next
+const nextBtnElem = document.querySelector(".my-next");
+const prevBtnElem = document.querySelector(".my-previous");
+console.log(nextBtnElem, prevBtnElem);
+
+// Dichiaro variabile per le immagini attive
+let imgActive = 0;
+
+// Prelevo dalla pagina tutti gli elementi immagini tramite querySelectorAll e li salvo in una variabile (nodeList)
+const imgListElem = document.querySelectorAll(".my-carousel-item");
+console.log(imgListElem);
+
+// Aggiungo active solo alla prima immagine
+imgListElem[imgActive].classList.add("active");
+
+// Al click del bottone next
+nextBtnElem.addEventListener("click", next);
+
+function next () {
+  // Rimuovo classe active dall'immagine
+  imgListElem[imgActive].classList.remove("active");
+
+  // Condizione per incremento di imgActive
+  imgActive = (imgActive < imgListElem.length - 1) ? imgActive + 1 : 0;
+
+  // Aggiungo active
+  imgListElem[imgActive].classList.add("active");
+};
