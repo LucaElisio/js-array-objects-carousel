@@ -75,3 +75,17 @@ function next () {
   // Aggiungo active
   imgListElem[imgActive].classList.add("active");
 };
+
+// Al click del bottone prev
+prevBtnElem.addEventListener("click", prev);
+
+function prev () {
+  // Rimuovo classe active dall'immagine
+  imgListElem[imgActive].classList.remove("active");
+
+  // Condizione per incremento di imgActive
+  imgActive = (imgActive === 0) ? imgActive = imgListElem.length - 1 : imgActive - 1; 
+
+  // Aggiungo active
+  imgListElem[imgActive].classList.add("active");
+};
